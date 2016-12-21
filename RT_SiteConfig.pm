@@ -5,6 +5,8 @@ Set( $WebPort, $ENV{WEB_PORT} || 80 );
 Set( $LogToSTDERR, $ENV{LOG_LEVEL} || "info" );
 Set( $Timezone, $ENC{RT_TZ} || "UTC" );
 
+Set( $CanonicalizeRedirectURLs, 1 );
+
 Set( $DatabaseType, "Pg" );
 Set( $DatabaseHost, $ENV{DATABASE_HOST} || $ENV{DB_PORT_5432_TCP_ADDR} || "localhost" );
 Set( $DatabasePort, $ENV{DATABASE_PORT} || "" );
