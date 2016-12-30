@@ -18,7 +18,7 @@ Set( $SendmailArguments, $ENV{SENDMAIL_ARGS} || "--host=mail -t --read-envelope-
 Set( $VERPPrefix, $ENV{VERP_PREFIX} || "rtbounce-" );
 Set( $VERPDomain, $ENV{VERP_DOMAIN} || $ENV{WEB_DOMAIN} || "example.com" );
 
-Set(@LexiconLanguages, $ENV{RT_LANG} || qw(en));
+Set(@LexiconLanguages, split(' ', $ENV{RT_LANG} || qw(en)) );
 
 # GnuPG support requires extra work downstream to enable
 Set( %GnuPG, Enable => 0 );
