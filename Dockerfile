@@ -99,6 +99,7 @@ RUN echo mail > /etc/hostname; \
 		spawn-fcgi \
 		ucf \
 	&& apt-get install -y --no-install-recommends \
+		busybox-syslogd \
 		ca-certificates \
 		curl \
 		dovecot-lmtpd \
